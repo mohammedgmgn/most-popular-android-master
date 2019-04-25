@@ -95,11 +95,11 @@ sonarqube {
         // first defines where the java files are, the second where the xml files are
         property "sonar.binaries", "build/intermediates/classes/*"
         property "sonar.libraries", libraries
-        property "sonar.java.binaries", "build/intermediates/classes/*"
-        property "sonar.java.libraries", libraries
+//        property "sonar.java.binaries", "build/intermediates/classes/*"
+//        property "sonar.java.libraries", libraries
         property "sonar.tests", "src/test/java" // where the tests are located
-        property "sonar.java.test.binaries", "build/intermediates/classes/*"
-        property "sonar.java.test.libraries", libraries
+//        property "sonar.java.test.binaries", "build/intermediates/classes/*"
+//        property "sonar.java.test.libraries", libraries
         property "sonar.scm.provider", "git"
         property "sonar.jacoco.reportPaths", "build/jacoco/testDebugUnitTest.exec"
         property "sonar.jacoco.reportPaths", "build/jacoco/testDebugUnitTest.exec, build/spoon/mock/debug/coverage/merged-coverage.ec"
