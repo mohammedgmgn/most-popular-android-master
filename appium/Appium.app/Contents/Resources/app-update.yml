@@ -1,0 +1,5 @@
+owner: appium
+repo: appium-desktop
+provider: github
+vPrefixedTagName: true
+updaterCacheDirName: appium-desktop-updater

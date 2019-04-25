@@ -1,0 +1,87 @@
+{
+  "name": "appium-desktop",
+  "version": "1.12.1",
+  "description": "Graphical interface for the Appium server, and an app inspector",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appium/appium-desktop.git"
+  },
+  "author": {
+    "name": "Appium Developers",
+    "email": "",
+    "url": "https://github.com/appium"
+  },
+  "license": "APACHE2",
+  "bugs": {
+    "url": "https://github.com/appium/appium-desktop/issues"
+  },
+  "assetsPath": "assets",
+  "homepage": "https://github.com/appium/appium-desktop",
+  "main": "dist/main.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit",
+      "pre-push": "npm run pre-push"
+    }
+  },
+  "bin": {
+    "electron": "./node_modules/.bin/electron"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "ansi-to-html": "~0.6.7",
+    "antd": "^3.16.1",
+    "appium": "1.12.1",
+    "appium-support": "^2.25.0",
+    "bluebird": "^3.5.3",
+    "connected-react-router": "^6.0.0",
+    "css-modules-require-hook": "^4.2.3",
+    "electron-debug": "^2.0.0",
+    "electron-log": "^3.0.1",
+    "electron-settings": "^2.2.4",
+    "electron-updater": "^4.0.1",
+    "fix-path": "^2.1.0",
+    "font-awesome": "4.x",
+    "format-json": "1.x",
+    "highlight.js": "9.x",
+    "history": "^4.7.2",
+    "i18next": "^15.0.8",
+    "i18next-node-fs-backend": "^2.1.1",
+    "lodash": "4.x",
+    "moment": "^2.20.1",
+    "postcss": "^7.0.4",
+    "prop-types": "^15.6.2",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-hot-loader": "^4.3.12",
+    "react-i18next": "^10.0.4",
+    "react-redux": "^6.0.0",
+    "react-router": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "2.x",
+    "request-promise": "^4.2.2",
+    "shell-env": "^2.1.0",
+    "source-map-support": "^0.5.0",
+    "teen_process": "^1.11.0",
+    "temp": "0.x",
+    "uuid": "3.x",
+    "wd": "^1.6.0",
+    "xpath": "0.0.27"
+  },
+  "devEngines": {
+    "node": ">=6.x",
+    "npm": ">=3.x"
+  },
+  "engines": {
+    "node": ">=10.x",
+    "npm": ">=5.x"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "electron",
+      "less",
+      "electron-settings"
+    ]
+  }
+}
