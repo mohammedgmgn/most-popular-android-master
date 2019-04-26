@@ -14,8 +14,8 @@ generated_fastfile_id "d8dd5281-f9b8-4558-ad3a-e6faa03246e9"
 default_platform :android
 
 # Fabric Tokens
-API_TOKEN = 'f5f26ce539a66b8dfba93162b688d44dd8af4cef'
-BUILD_SECRET = 'ee11612934e155f7c627574af4f4e367f0a69f08ba038e074428d89ad6788a40'
+API_TOKEN = 'bfe46de5e3fasdfasdfaafd3cd0a692053bf6d'
+BUILD_SECRET = 'b5e444e36ba2f0a844f4fasdfasdfa4e9baf5bb19f804a7b34768d8ded'
 
 # Fastfile actions accept additional configuration, but
 # don't worry, fastlane will prompt you for required
