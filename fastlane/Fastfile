@@ -3,82 +3,23 @@
 # https://docs.fastlane.tools
 fastlane_version "2.68.0"
 
-# Skip overwriting the README file
-skip_docs
-
 # This value helps us track success metrics for Fastfiles
 # we automatically generate. Feel free to remove this line
 # once you get things running smoothly!
-generated_fastfile_id "d8dd5281-f9b8-4558-ad3a-e6faa03246e9"
+generated_fastfile_id "e129cba7-285d-40a8-8173-d5a3446b692c"
 
 default_platform :android
-
-# Fabric Tokens
-API_TOKEN = 'bfe46de5e3fasdfasdfaafd3cd0a692053bf6d'
-BUILD_SECRET = 'b5e444e36ba2f0a844f4fasdfasdfa4e9baf5bb19f804a7b34768d8ded'
 
 # Fastfile actions accept additional configuration, but
 # don't worry, fastlane will prompt you for required
 # info which you can add here later
-
-lane :lint do
-  gradle(task: "lint")
-end
-
-lane :tests do
-  gradle(task: "test")
-end
-
-lane :build_for_appium do
-  build_android_app(
-    task: "assemble",
-    build_type: "Debug",
-    print_command: true
-  )
-end
-
 lane :beta do
   # build the release variant
-  build_android_app(
-    task: "assemble",
-    build_type: "Release",
-    print_command: true,
-    properties: {
-      "android.injected.signing.store.file" => "keystore.jks",
-      "android.injected.signing.store.password" => "keystore_password", # ENV["KEYSTORE_PASSWORD"],
-      "android.injected.signing.key.alias" => "alias",
-      "android.injected.signing.key.password" => "alias_password",
-    }
-  )
-fastlane beta
-  #build_android_app(task: "assembleRelease")
+  build_android_app(task: "assembleRelease")
 
   # upload to Beta by Crashlytics
-crashlytics(
-    api_token: "bfe46de5e3fasdfasdfaafd3cd0a692053bf6d",
-    build_secret: "b5e444e36ba2f0a844f4fasdfasdfa4e9baf5bb19f804a7b34768d8ded"
-  )
-
-  upload_crashlytics(groups: "testers")
-  notify_on_slack
-end
-
-private_lane :upload_crashlytics do |options|
-  groups = options[:groups]
-
   crashlytics(
-    api_token: API_TOKEN,
-    build_secret: BUILD_SECRET,
-    debug: "true",
-    groups: groups
+    api_token: "72caf1ef03644747d6e011ea1e7a2aac4dbcda43",
+    build_secret: "98af9350e846143ff1797029be8661e5e0ddb439d1fecc930ee3db29b590b204"
   )
-  
-end
-
-private_lane :notify_on_slack do
-
-  slack(
-  slack_url: "https://hooks.slack.com/services/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"
-  )
-
 end

@@ -14,20 +14,16 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
 
-            <meta-data
-                android:name="io.fabric.ApiKey"
-                android:value="f5f26ce539a22aasdfadfba93162b6884444dd8af4cef"
-                />
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
-          android:name="io.fabric.ApiKey"
-          android:value="f5f26ce539a66b8dfba93162b688d44dd8af4cef"
-          />
+            android:name="io.fabric.ApiKey"
+            android:value="72caf1ef03644747d6e011ea1e7a2aac4dbcda43"
+            />
     </application>
 </manifest>

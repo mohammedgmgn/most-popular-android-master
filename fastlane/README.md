@@ -2,22 +2,6 @@ fastlane documentation
 ================
 # Installation
 
-## Windows Users
-Install [rubyinstaller](https://rubyinstaller.org/) version =>2.0 and <2.6 
-
-after installing ruby installer basics 
-
-Open a CMD session and run the following:
-
-`gem install unf_ext -v 0.0.7.5 -NV`
-
-After successfully installing, run the following:
-
-`gem install fastlane -NV`
-
-
-## Mac Users
-
 Make sure you have the latest version of the Xcode command line tools installed:
 
 ```
@@ -31,21 +15,6 @@ Install _fastlane_ using
 or alternatively using `brew cask install fastlane`
 
 # Available Actions
-### lint
-```
-fastlane lint
-```
-
-### tests
-```
-fastlane tests
-```
-
-### build_for_appium
-```
-fastlane build_for_appium
-```
-
 ### beta
 ```
 fastlane beta
