@@ -16,6 +16,14 @@ jacoco {
 }
 
 android {
+    signingConfigs {
+        signingConfig {
+            storeFile file('/Users/oudaykhaled/keyvault/keystore.jks')
+            storePassword 'keystore_password'
+            keyPassword 'alias_password'
+            keyAlias = 'alias'
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.android.nytimes"
@@ -32,6 +40,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.signingConfig
         }
     }
 
