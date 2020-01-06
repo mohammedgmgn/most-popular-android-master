@@ -19,19 +19,19 @@ import java.util.List;
  * Created by Nibedita on 11/02/2018.
  */
 
-public class ArticleListAdapter<T> extends RecyclerView.Adapter<ArticleListAdapter.ViewHolder> {
+public class ArticleListAdapter<T> extends RecyclerView.Adapter<ArticleListAdapter.MyViewHolder> {
 
     private final List<T> mData;
     private final Picasso mPicasso;
     private final ArticleListItemClickListener mArticleListItemClickListener;
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public final TextView mTitle;
         public final TextView mSubTitle;
         public final ImageView mImageView;
 
-        public ViewHolder(View itemView) {
+        public MyViewHolder(View itemView) {
             super(itemView);
             mTitle = itemView.findViewById(R.id.title);
             mSubTitle = itemView.findViewById(R.id.sub_title);
@@ -54,15 +54,15 @@ public class ArticleListAdapter<T> extends RecyclerView.Adapter<ArticleListAdapt
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         final View itemView = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.article_list_item, parent, false);
 
-        return new ViewHolder(itemView);
+        return new MyViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(ArticleListAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(ArticleListAdapter.MyViewHolder holder, int position) {
         final T data = this.mData.get(position);
         if(data != null && data instanceof Result){
             Result result = (Result) data;
