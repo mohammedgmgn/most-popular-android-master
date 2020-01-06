@@ -32,7 +32,7 @@ public class ArticleListFragment extends BaseFragment implements ArticleListFrag
     private RecyclerView mRecyclerView;
     private FragmentCallback mFragmentCallback;
     private ArticleListFragmentPresenter mArticleListFragmentPresenter;
-    private FragmentManager mFragmentManager;
+    private FragmentManager manager;
     private ArticleListAdapter mArticleListAdapter;
     private View mView;
 
@@ -55,7 +55,7 @@ public class ArticleListFragment extends BaseFragment implements ArticleListFrag
         mRecyclerView = mView.findViewById(R.id.listView);
         mRecyclerView.addItemDecoration(CommonUtils.getListDivider(getActivity()));
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mFragmentManager = getActivity().getSupportFragmentManager();
+        manager = getActivity().getSupportFragmentManager();
         return mView;
     }
 
@@ -82,7 +82,7 @@ public class ArticleListFragment extends BaseFragment implements ArticleListFrag
         Fragment detailFragment = new ArticleDetailFragment();
         Bundle bundle = new Bundle();
         bundle.putString("url", url);
-        mFragmentManager.beginTransaction().replace(R.id.container_detail, detailFragment).commit();
+        manager.beginTransaction().replace(R.id.container_detail, detailFragment).commit();
     }
 
     @Override
