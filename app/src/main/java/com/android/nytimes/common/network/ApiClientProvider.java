@@ -1,6 +1,7 @@
 package com.android.nytimes.common.network;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.android.nytimes.BuildConfig;
 import com.android.nytimes.common.error.BaseURLEmptyException;
@@ -145,12 +146,12 @@ public class ApiClientProvider {
                     new X509TrustManager() {
                         @Override
                         public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) {
-                            //empty
+                            Log.v("authType",authType);
                         }
 
                         @Override
                         public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) {
-                            //empty
+                            Log.v("authType",authType);
                         }
 
                         @Override
