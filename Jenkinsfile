@@ -13,7 +13,7 @@ pipeline {
         // publish Android Lint results
   //      androidLint canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'app/build/reports/**/lint-results.xml', unHealthy: ''
     //  }
-    }//
+    //}
 
 //     stage('Unit tests') {
 //       steps {
