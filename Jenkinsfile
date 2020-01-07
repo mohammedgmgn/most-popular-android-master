@@ -7,7 +7,7 @@ pipeline {
       steps {
         sh '''
 export LANG=en_US.UTF-8
-# source ~/.bash_profile
+source ~/.bash_profile
 fastlane lint
 '''
         // publish Android Lint results
