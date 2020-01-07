@@ -3,18 +3,17 @@ pipeline {
     label 'iOS'
   }
   stages {
-  //  stage('Lint') {
-    //  steps {
-    //    sh '''
-//export LANG=en_US.UTF-8
-//source ~/.bash_profile
-//fastlane lint
-//'''
+    stage('Lint') {
+      steps {
+        sh '''
+export LANG=en_US.UTF-8
+source ~/.bash_profile
+fastlane lint
+'''
         // publish Android Lint results
-  //      androidLint canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'app/build/reports/**/lint-results.xml', unHealthy: ''
-    //  }
-    //}
-
+        androidLint canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'app/build/reports/**/lint-results.xml', unHealthy: ''
+      }
+    }
 //     stage('Unit tests') {
 //       steps {
 //         sh '''
